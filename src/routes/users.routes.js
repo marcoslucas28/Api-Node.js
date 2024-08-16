@@ -6,14 +6,6 @@ const usersController = new UsersController()
 
 const usersRoutes = Router()
 
-function myMiddlewares(request, response, next){
-    if(!request.body.isAdmin){
-        return response.json({message: "user unauthorized"})
-    }
-
-    next()
-}
-
-usersRoutes.post("/",myMiddlewares,usersController.create)
+usersRoutes.post("/",usersController.create)
 
 module.exports = usersRoutes
