@@ -88,7 +88,7 @@ class NotesController {
         })
 
         
-        return response.json(nonotesWithTagstes)
+        return response.json(notesWithTags)
     }
 }
 
